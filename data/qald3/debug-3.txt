@@ -1,0 +1,1355 @@
+Available catalogs: [/, chainyi, dbpedia2014, system, zhishime]
+
+Got a graph maker for the connection.
+
+====================================================
+
+
+====================================================
+
+
+====================================================
+
+
+====================================================
+
+
+====================================================
+
+
+====================================================
+
+ID: 	1
+Content: 	
+Which German cities have more than 250000 inhabitants?
+
+OnlyDBO: true	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=true, WHERE=false}
+Focus Content: 	German cities
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: No matched entity in the Node.
+
+ID: 	5
+Content: 	
+What is the second highest mountain on Earth?
+
+OnlyDBO: false	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=true, WHERE=false}
+Focus Content: 	second highest mountain
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/mass
+	3^^http://www.w3.org/2001/XMLSchema#integer
+====================================================
+
+ID: 	11
+Content: 	
+Who is the Formula 1 race driver with the most races?
+
+OnlyDBO: true	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=true, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: No matched entity in the Node.
+
+ID: 	13
+Content: 	
+Who is the youngest player in the Premier League?
+
+OnlyDBO: true	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=true, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+
+====================================================
+
+ID: 	15
+Content: 	
+What is the longest river?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=true, WHERE=false}
+Focus Content: 	longest river
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+entityList size equals 0.
+
+ID: 	16
+Content: 	
+Does the new Battlestar Galactica series have more episodes than the old one?
+
+OnlyDBO: true	Aggregation: true
+Category: 	BOOLEAN
+Rule Judgement:	{WHO=false, COMPARISON=true, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+ANSWER = null / ANSWER has exception: 16 constraintList size equals 2 && pipeline style &&No matched entity
+ID: 	25
+Content: 	
+Which U.S. state has been admitted latest?
+
+OnlyDBO: false	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=true, WHERE=false}
+Focus Content: 	U.S. state
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: No matched entity in the Node.
+
+ID: 	50
+Content: 	
+Was the Cuban Missile Crisis earlier than the Bay of Pigs Invasion?
+
+OnlyDBO: true	Aggregation: true
+Category: 	BOOLEAN
+Rule Judgement:	{WHO=false, COMPARISON=true, WHERE=false}
+Focus Content: 	
+Entity List: 	3
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+
+ID: 	80
+Content: 	
+Give me all books by William Goldman with more than 300 pages.
+
+OnlyDBO: true	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=true, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/author
+	http://dbpedia.org/resource/Adventures_in_the_Screen_Trade	http://dbpedia.org/resource/A_Family_Affair_(musical)	http://dbpedia.org/resource/Brothers_(Goldman_novel)	http://dbpedia.org/resource/Hype_and_Glory	http://dbpedia.org/resource/Your_Turn_to_Curtsy,_My_Turn_to_Bow	http://dbpedia.org/resource/Magic_(novel)	http://dbpedia.org/resource/Wait_Till_Next_Year	http://dbpedia.org/resource/Soldier_in_the_Rain__Soldier_in_the_Rain__1	http://dbpedia.org/resource/The_Season:_A_Candid_Look_at_Broadway	http://dbpedia.org/resource/Wigger_(novel)	http://dbpedia.org/resource/The_Silent_Gondoliers	http://dbpedia.org/resource/Boys_and_Girls_Together	http://dbpedia.org/resource/Marathon_Man_(novel)	http://dbpedia.org/resource/The_Temple_of_Gold	http://dbpedia.org/resource/Father's_Day_(novel)	http://dbpedia.org/resource/The_Princess_Bride	http://dbpedia.org/resource/Which_Lie_Did_I_Tell%3F	http://dbpedia.org/resource/Tinsel_(novel)	http://dbpedia.org/resource/The_Thing_of_It_Is...	http://dbpedia.org/resource/The_Color_of_Light	http://dbpedia.org/resource/No_Way_to_Treat_a_Lady__No_Way_to_Treat_a_Lady__1	http://dbpedia.org/resource/Blood,_Sweat_and_Stanley_Poole	http://dbpedia.org/resource/Control_(novel)	http://dbpedia.org/resource/Heat_(Goldman_novel)
+====================================================
+
+ID: 	86
+Content: 	
+What is the largest city in Australia?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=true, WHERE=false}
+Focus Content: 	largest city
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/largestCity
+	http://dbpedia.org/resource/Sydney
+====================================================
+
+ID: 	4
+Content: 	
+How many students does the Free University in Amsterdam have?
+
+OnlyDBO: true	Aggregation: false
+Category: 	NUMBER
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	students
+Entity List: 	2
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/students
+	24500^^http://www.w3.org/2001/XMLSchema#integer
+====================================================
+
+ID: 	26
+Content: 	
+How many official languages are spoken on the Seychelles?
+
+OnlyDBO: true	Aggregation: true
+Category: 	NUMBER
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	official languages
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	32
+Content: 	
+How often did Nicole Kidman marry?
+
+OnlyDBO: true	Aggregation: true
+Category: 	NUMBER
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+ANSWER_TYPE = 0
+
+====================================================
+
+ID: 	38
+Content: 	
+How many inhabitants does Maribor have?
+
+OnlyDBO: true	Aggregation: false
+Category: 	NUMBER
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	inhabitants
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/populationTotal
+	114487^^http://www.w3.org/2001/XMLSchema#nonNegativeInteger
+====================================================
+
+ID: 	61
+Content: 	
+How many space missions have there been?
+
+OnlyDBO: true	Aggregation: true
+Category: 	NUMBER
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	space missions
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	68
+Content: 	
+How many employees does Google have?
+
+OnlyDBO: true	Aggregation: false
+Category: 	NUMBER
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	employees
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/numEmployees
+	49829^^http://www.w3.org/2001/XMLSchema#integer
+====================================================
+
+ID: 	73
+Content: 	
+How many children did Benjamin Franklin have?
+
+OnlyDBO: true	Aggregation: true
+Category: 	NUMBER
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	children
+Entity List: 	2
+-------------------------
+ANSWER_TYPE = 0
+
+====================================================
+
+ID: 	85
+Content: 	
+How many people live in the capital of Australia?
+
+OnlyDBO: true	Aggregation: false
+Category: 	NUMBER
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	people
+Entity List: 	1
+-------------------------
+
+====================================================
+
+ID: 	7
+Content: 	
+When was Alberta admitted as province?
+
+OnlyDBO: false	Aggregation: false
+Category: 	DATE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/admittancedate
+	1905-09-01^^http://www.w3.org/2001/XMLSchema#date
+====================================================
+
+ID: 	56
+Content: 	
+When were the Hells Angels founded?
+
+OnlyDBO: false	Aggregation: false
+Category: 	DATE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/releaseDate
+	1997-12-01^^http://www.w3.org/2001/XMLSchema#date	2004-06-06^^http://www.w3.org/2001/XMLSchema#date	2006-12-18^^http://www.w3.org/2001/XMLSchema#date	2008-10-27^^http://www.w3.org/2001/XMLSchema#date
+====================================================
+
+ID: 	71
+Content: 	
+When was the Statue of Liberty built?
+
+OnlyDBO: false	Aggregation: false
+Category: 	DATE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/beginningDate
+	1886-10-28^^http://www.w3.org/2001/XMLSchema#date
+====================================================
+
+ID: 	74
+Content: 	
+When did Michael Jackson die?
+
+OnlyDBO: true	Aggregation: false
+Category: 	DATE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/deathDate
+	2009-06-25^^http://www.w3.org/2001/XMLSchema#date
+====================================================
+
+ID: 	90
+Content: 	
+Where is the residence of the prime minister of Spain?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=true}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+Pair Predicate: http://dbpedia.org/ontology/leader	http://dbpedia.org/property/house
+	http://dbpedia.org/resource/House_of_Bourbon
+====================================================
+
+ID: 	2
+Content: 	
+Who was the successor of John F. Kennedy?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/successor
+	http://dbpedia.org/resource/Tip_O'Neill	http://dbpedia.org/resource/Benjamin_A._Smith_II	http://dbpedia.org/resource/Lyndon_B._Johnson	http://dbpedia.org/resource/Dwight_D._Eisenhower	http://dbpedia.org/resource/James_Michael_Curley	http://dbpedia.org/resource/Presidency_of_Dwight_D._Eisenhower
+====================================================
+
+ID: 	3
+Content: 	
+Who is the mayor of Berlin?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/leader
+	http://dbpedia.org/resource/Klaus_Wowereit
+====================================================
+
+ID: 	22
+Content: 	
+Who is the governor of Wyoming?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/governor
+	http://dbpedia.org/resource/Matt_Mead
+====================================================
+
+ID: 	24
+Content: 	
+Who was the father of Queen Elizabeth II?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/father
+	http://dbpedia.org/resource/George_VI
+====================================================
+
+ID: 	35
+Content: 	
+Who developed Minecraft?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/developer
+	http://dbpedia.org/resource/Mojang	http://dbpedia.org/resource/4J_Studios
+====================================================
+
+ID: 	41
+Content: 	
+Who founded Intel?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/founder
+	http://dbpedia.org/resource/Gordon_Moore	http://dbpedia.org/resource/Robert_Noyce	http://dbpedia.org/resource/Trusted_Computing_Group
+====================================================
+
+ID: 	42
+Content: 	
+Who is the husband of Amanda Palmer?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/spouse
+	http://dbpedia.org/resource/Neil_Gaiman
+====================================================
+
+ID: 	52
+Content: 	
+Who invented the zipper?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	67
+Content: 	
+Who are the parents of the wife of Juan Carlos I?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+Pair Predicate: http://dbpedia.org/ontology/spouse	http://dbpedia.org/ontology/parent
+	http://dbpedia.org/resource/Paul_of_Greece	http://dbpedia.org/resource/Frederica_of_Hanover	http://dbpedia.org/resource/Infanta_Cristina,_Duchess_of_Palma_de_Mallorca	http://dbpedia.org/resource/Felipe,_Prince_of_Asturias	http://dbpedia.org/resource/Infanta_Elena,_Duchess_of_Lugo
+====================================================
+
+ID: 	77
+Content: 	
+Who was called Scarface?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/label
+	http://dbpedia.org/resource/Rap-A-Lot_Records	http://dbpedia.org/resource/Atlantic_Records	http://dbpedia.org/resource/Asylum_Records
+====================================================
+
+ID: 	84
+Content: 	
+Who created the comic Captain America?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/creator
+	http://dbpedia.org/resource/Joe_Simon	http://dbpedia.org/resource/Jack_Kirby	http://dbpedia.org/resource/Isaiah_Bradley
+====================================================
+
+ID: 	87
+Content: 	
+Who composed the music for Harold and Maude?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+Pair Predicate: http://dbpedia.org/property/music	http://dbpedia.org/ontology/associatedMusicalArtist
+	http://dbpedia.org/resource/Alun_Davies_(guitarist)	http://dbpedia.org/resource/Bernard_Purdie	http://dbpedia.org/resource/The_McCrarys	http://dbpedia.org/resource/Gerry_Conway_(musician)	http://dbpedia.org/resource/Bruce_Lynch	http://dbpedia.org/resource/Dolly_Parton	http://dbpedia.org/resource/Rick_Wakeman	http://dbpedia.org/resource/Nicky_Hopkins	http://dbpedia.org/resource/Marc_Marot	http://dbpedia.org/resource/Dawud_Wharnsby	http://dbpedia.org/resource/Shel_Talmy	http://dbpedia.org/resource/Zain_Bhikha	http://dbpedia.org/resource/Linda_Lewis	http://dbpedia.org/resource/Don_Weller_(musician)	http://dbpedia.org/resource/Mike_Hurst_(producer)	http://dbpedia.org/resource/Chuck_Kaye	http://dbpedia.org/resource/Magna_Carta_(band)	http://dbpedia.org/resource/Hamza_Robertson	http://dbpedia.org/resource/Christos_Demetriou	http://dbpedia.org/resource/Ian_Whiteman
+====================================================
+
+ID: 	95
+Content: 	
+Who wrote the lyrics for the Polish national anthem?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+Pair Predicate: http://dbpedia.org/ontology/anthem	http://dbpedia.org/ontology/language
+	http://dbpedia.org/resource/Polish_language	http://dbpedia.org/resource/Without_Anesthesia	http://dbpedia.org/resource/Maria_Kuncewiczowa	http://dbpedia.org/resource/By%C5%82o_sobie_miasteczko...	http://dbpedia.org/resource/The_Cruise_(film)	http://dbpedia.org/resource/Chc%C4%99_zna%C4%87_sw%C3%B3j_grzech...	http://dbpedia.org/resource/Death_in_Venice_(film)	http://dbpedia.org/resource/A_Jungle_Book_of_Regulations	http://dbpedia.org/resource/A_Woman's_Decision	http://dbpedia.org/resource/U%C5%82ani,_u%C5%82ani,_ch%C5%82opcy_malowani	http://dbpedia.org/resource/Przytul_mnie_mocno	http://dbpedia.org/resource/Ale_jestem	http://dbpedia.org/resource/Comedy_Central_Family_(Poland)	http://dbpedia.org/resource/Ma%C5%82%C5%BCe%C5%84stwo_z_rozs%C4%85dku	http://dbpedia.org/resource/Polonica.net	http://dbpedia.org/resource/CBS_Europa	http://dbpedia.org/resource/Three_Colors:_Blue	http://dbpedia.org/resource/Szamanka	http://dbpedia.org/resource/The_Doll_(1968_film)	http://dbpedia.org/resource/M%C4%85%C5%BC_swojej_%C5%BCony	http://dbpedia.org/resource/Geographical_Dictionary_of_the_Kingdom_of_Poland	http://dbpedia.org/resource/11_listopada	http://dbpedia.org/resource/Tadeusz_Peiper	http://dbpedia.org/resource/The_Voice_of_Poland	http://dbpedia.org/resource/A_Love_in_Germany	http://dbpedia.org/resource/Marian_Hemar	http://dbpedia.org/resource/To_takie_proste	http://dbpedia.org/resource/Ranczo_(TV_series)	http://dbpedia.org/resource/To_nie_ja!	http://dbpedia.org/resource/Czas_honoru	http://dbpedia.org/resource/Wyprawa_Robinson	http://dbpedia.org/resource/The_Office_(film)	http://dbpedia.org/resource/Feliks_Konarski	http://dbpedia.org/resource/Jutro_idziemy_do_kina	http://dbpedia.org/resource/Dziennik_Polska-Europa-%C5%9Awiat	http://dbpedia.org/resource/Pod_bander%C4%85_mi%C5%82o%C5%9Bci	http://dbpedia.org/resource/Dagny_(film)	http://dbpedia.org/resource/Witold_Gombrowicz	http://dbpedia.org/resource/Cylinder_van_Troffa	http://dbpedia.org/resource/Ladies_in_Lavender	http://dbpedia.org/resource/Zakazane_piosenki	http://dbpedia.org/resource/Tlen.pl	http://dbpedia.org/resource/Operacja_Samum	http://dbpedia.org/resource/The_Winner_(2011_film)	http://dbpedia.org/resource/A_Bridge_Too_Far_(film)	http://dbpedia.org/resource/From_a_Night_Porter's_Point_of_View	http://dbpedia.org/resource/Na_dobre_i_na_z%C5%82e	http://dbpedia.org/resource/Concert_of_Requests	http://dbpedia.org/resource/On_the_Silver_Globe_(film)	http://dbpedia.org/resource/A_Year_of_the_Quiet_Sun	http://dbpedia.org/resource/Daas_(2011_film)	http://dbpedia.org/resource/The_Three_Colors_trilogy	http://dbpedia.org/resource/Hydrozagadka	http://dbpedia.org/resource/VH1_Poland	http://dbpedia.org/resource/Urania_%E2%80%93_Post%C4%99py_Astronomii	http://dbpedia.org/resource/Sama_(song)	http://dbpedia.org/resource/Chopin:_Desire_for_Love
+====================================================
+
+ID: 	97
+Content: 	
+Who painted The Storm on the Sea of Galilee?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+ANSWER = null / ANSWER has exception: No matched entity in the Node.
+
+ID: 	100
+Content: 	
+Who produces Orangina?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=true, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/product
+	http://dbpedia.org/resource/A.G._Barr
+====================================================
+
+ID: 	6
+Content: 	
+Give me all professional skateboarders from Sweden.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/person
+	http://dbpedia.org/resource/UXu__1
+====================================================
+
+ID: 	8
+Content: 	
+To which countries does the Himalayan mountain system extend?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	countries
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/country
+	http://dbpedia.org/resource/Bhutan
+====================================================
+
+ID: 	9
+Content: 	
+Give me a list of all trumpet players that were bandleaders.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+entityList size equals 0.
+
+ID: 	10
+Content: 	
+What is the total amount of men and women serving in the FDNY?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	total amount
+Entity List: 	1
+-------------------------
+Pair Predicate: http://dbpedia.org/ontology/operator	http://dbpedia.org/property/added
+	1989-06-30^^http://www.w3.org/2001/XMLSchema#date
+====================================================
+
+ID: 	12
+Content: 	
+Give me all world heritage sites designated within the past five years.
+
+OnlyDBO: false	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	14
+Content: 	
+Give me all members of Prodigy.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/bandMember
+	http://dbpedia.org/resource/Mobb_Deep
+====================================================
+
+ID: 	17
+Content: 	
+Give me all cars that are produced in Germany.
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/production
+	http://dbpedia.org/resource/BMW_i8	http://dbpedia.org/resource/Mercedes-Benz_CLS-Class
+====================================================
+
+ID: 	19
+Content: 	
+Give me all people that were born in Vienna and died in Berlin.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+Pair Predicate: http://dbpedia.org/ontology/birthPlace	http://dbpedia.org/ontology/deathPlace
+	http://dbpedia.org/resource/Eduard_von_Winterstein	http://dbpedia.org/resource/Adolf_Klein	http://dbpedia.org/resource/Michael_von_Newlinsky	http://dbpedia.org/resource/Hugo_Flink	http://dbpedia.org/resource/Therese_Gr%C3%BCnbaum	http://dbpedia.org/resource/Richard_Thurnwald	http://dbpedia.org/resource/Alfred_Halm	http://dbpedia.org/resource/Hilde_K%C3%B6rber	http://dbpedia.org/resource/Erik_Jan_Hanussen	http://dbpedia.org/resource/Steffie_Spira	http://dbpedia.org/resource/Grete_von_Zieritz	http://dbpedia.org/resource/Karl_Hellmer	http://dbpedia.org/resource/Karl_Etlinger
+====================================================
+
+ID: 	20
+Content: 	
+How tall is Michael Jordan?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+
+ID: 	21
+Content: 	
+What is the capital of Canada?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	capital
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/capital
+	http://dbpedia.org/resource/Ottawa	http://dbpedia.org/resource/Aerican_Empire
+====================================================
+
+ID: 	27
+Content: 	
+Sean Parnell is the governor of which U.S. state?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	U.S. state
+Entity List: 	2
+-------------------------
+ANSWER_TYPE = 0
+
+====================================================
+
+ID: 	28
+Content: 	
+Give me all movies directed by Francis Ford Coppola.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/director
+	http://dbpedia.org/resource/The_Cotton_Club_(film)	http://dbpedia.org/resource/The_Godfather_Part_III	http://dbpedia.org/resource/Battle_Beyond_the_Sun	http://dbpedia.org/resource/Bram_Stoker's_Dracula	http://dbpedia.org/resource/Tetro	http://dbpedia.org/resource/The_Outsiders_(film)	http://dbpedia.org/resource/One_from_the_Heart	http://dbpedia.org/resource/The_Godfather_Saga	http://dbpedia.org/resource/Dementia_13	http://dbpedia.org/resource/Rumble_Fish	http://dbpedia.org/resource/The_Godfather_(film_series)	http://dbpedia.org/resource/Peggy_Sue_Got_Married	http://dbpedia.org/resource/Apocalypse_Now_Redux	http://dbpedia.org/resource/Gardens_of_Stone	http://dbpedia.org/resource/The_Bellboy_and_the_Playgirls	http://dbpedia.org/resource/Tucker:_The_Man_and_His_Dream	http://dbpedia.org/resource/The_Terror_(1963_film)	http://dbpedia.org/resource/The_Rainmaker_(1997_film)	http://dbpedia.org/resource/New_York_Stories	http://dbpedia.org/resource/The_Godfather_Part_II	http://dbpedia.org/resource/Twixt_(film)	http://dbpedia.org/resource/Apocalypse_Now	http://dbpedia.org/resource/Tonight_for_Sure	http://dbpedia.org/resource/The_Godfather	http://dbpedia.org/resource/The_Rain_People	http://dbpedia.org/resource/Youth_Without_Youth_(film)	http://dbpedia.org/resource/The_Conversation	http://dbpedia.org/resource/You're_a_Big_Boy_Now	http://dbpedia.org/resource/Jack_(1996_film)
+====================================================
+
+ID: 	29
+Content: 	
+Give me all actors starring in movies directed by and starring William Shatner.
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+Pair Predicate: http://dbpedia.org/ontology/starring	http://dbpedia.org/ontology/starring
+	http://dbpedia.org/resource/Lorraine_Gary	http://dbpedia.org/resource/Hal_Holbrook	http://dbpedia.org/resource/Stewart_Granger	http://dbpedia.org/resource/William_Shatner	http://dbpedia.org/resource/Cybill_Shepherd	http://dbpedia.org/resource/Frank_McRae	http://dbpedia.org/resource/Roddy_McDowall	http://dbpedia.org/resource/Sonny_Bono	http://dbpedia.org/resource/Angie_Dickinson	http://dbpedia.org/resource/Eric_McCormack	http://dbpedia.org/resource/George_Takei	http://dbpedia.org/resource/Leonard_Nimoy	http://dbpedia.org/resource/Woody_Strode	http://dbpedia.org/resource/Richard_Kind	http://dbpedia.org/resource/Monica_Potter	http://dbpedia.org/resource/Howard_Da_Silva	http://dbpedia.org/resource/Chris_Rock	http://dbpedia.org/resource/Charles_Beaumont	http://dbpedia.org/resource/Ernie_Hudson	http://dbpedia.org/resource/Nick_Nolte	http://dbpedia.org/resource/Stephen_Collins	http://dbpedia.org/resource/Linda_Purl	http://dbpedia.org/resource/Gary_Coleman	http://dbpedia.org/resource/Desi_Lydic	http://dbpedia.org/resource/Amanda_Peet	http://dbpedia.org/resource/Patty_Duke	http://dbpedia.org/resource/Dan_Martin_(actor)	http://dbpedia.org/resource/Michael_Short	http://dbpedia.org/resource/Eddie_Murphy	http://dbpedia.org/resource/Ernest_Borgnine	http://dbpedia.org/resource/Greer_Garson	http://dbpedia.org/resource/Richard_Herd	http://dbpedia.org/resource/E._G._Marshall	http://dbpedia.org/resource/Tammy_Grimes	http://dbpedia.org/resource/Jessica_Alba	http://dbpedia.org/resource/Stephen_Macht	http://dbpedia.org/resource/Ben_Folds	http://dbpedia.org/resource/Kelly_Clarkson	http://dbpedia.org/resource/Mel_Torm%C3%A9	http://dbpedia.org/resource/Joseph_Cotten	http://dbpedia.org/resource/Richard_Basehart	http://dbpedia.org/resource/Nicole_Sullivan	http://dbpedia.org/resource/Marjoe_Gortner	http://dbpedia.org/resource/Robert_Reed	http://dbpedia.org/resource/Andy_Griffith	http://dbpedia.org/resource/Janet_Margolin	http://dbpedia.org/resource/Van_Johnson	http://dbpedia.org/resource/Ava_Gardner	http://dbpedia.org/resource/Bernard_Fox_(actor)	http://dbpedia.org/resource/Mila_Kunis	http://dbpedia.org/resource/Michelle_Phillips	http://dbpedia.org/resource/Samuel_L._Jackson	http://dbpedia.org/resource/Kathy_Ireland	http://dbpedia.org/resource/Emilio_Estevez	http://dbpedia.org/resource/Tim_Curry	http://dbpedia.org/resource/Barbara_Eden	http://dbpedia.org/resource/Morgan_Fairchild	http://dbpedia.org/resource/Traci_Lords	http://dbpedia.org/resource/Lloyd_Bridges	http://dbpedia.org/resource/Julie_Hagerty	http://dbpedia.org/resource/Rip_Torn	http://dbpedia.org/resource/Chuck_Connors	http://dbpedia.org/resource/Chad_Everett	http://dbpedia.org/resource/Robert_Hays	http://dbpedia.org/resource/Peter_Graves	http://dbpedia.org/resource/Wendy_Phillips	http://dbpedia.org/resource/Stephen_Stucker	http://dbpedia.org/resource/Tom_Skerritt	http://dbpedia.org/resource/Phil_LaMarr	http://dbpedia.org/resource/Audie_England	http://dbpedia.org/resource/Rafer_Weigel	http://dbpedia.org/resource/Nichelle_Nichols	http://dbpedia.org/resource/Walter_Koenig	http://dbpedia.org/resource/DeForest_Kelley	http://dbpedia.org/resource/James_Doohan	http://dbpedia.org/resource/Eddie_Izzard	http://dbpedia.org/resource/Colin_Hay	http://dbpedia.org/resource/Patrick_Warburton	http://dbpedia.org/resource/Chris_Edgerly	http://dbpedia.org/resource/Greg_Cipes	http://dbpedia.org/resource/Jim_Belushi	http://dbpedia.org/resource/Janeane_Garofalo	http://dbpedia.org/resource/Bob_Joles	http://dbpedia.org/resource/Don_Cherry	http://dbpedia.org/resource/Kiefer_Sutherland	http://dbpedia.org/resource/Betty_White	http://dbpedia.org/resource/Tara_Summers	http://dbpedia.org/resource/Julie_Bowen	http://dbpedia.org/resource/John_Larroquette	http://dbpedia.org/resource/Rhona_Mitra	http://dbpedia.org/resource/Christian_Clemenson	http://dbpedia.org/resource/Gary_Anthony_Williams	http://dbpedia.org/resource/Taraji_P._Henson	http://dbpedia.org/resource/Ren%C3%A9_Auberjonois	http://dbpedia.org/resource/Saffron_Burrows	http://dbpedia.org/resource/Mark_Valley	http://dbpedia.org/resource/James_Spader	http://dbpedia.org/resource/Candice_Bergen	http://dbpedia.org/resource/Justin_Mentell	http://dbpedia.org/resource/Constance_Zimmer	http://dbpedia.org/resource/Ryan_Michelle_Bathe	http://dbpedia.org/resource/Craig_Bierko	http://dbpedia.org/resource/Laurence_Harvey	http://dbpedia.org/resource/Paul_Newman	http://dbpedia.org/resource/Claire_Bloom	http://dbpedia.org/resource/Edward_G._Robinson	http://dbpedia.org/resource/Laurence_Fishburne	http://dbpedia.org/resource/David_Hyde_Pierce	http://dbpedia.org/resource/Chris_Elliott	http://dbpedia.org/resource/Molly_Shannon	http://dbpedia.org/resource/Brandy_Norwood	http://dbpedia.org/resource/Bill_Murray	http://dbpedia.org/resource/Jason_Priestley	http://dbpedia.org/resource/Eric_Johnson_(actor)	http://dbpedia.org/resource/Jeanne_Cooper	http://dbpedia.org/resource/Sandra_Bullock	http://dbpedia.org/resource/Michael_Caine	http://dbpedia.org/resource/Benjamin_Bratt	http://dbpedia.org/resource/Garry_Shandling	http://dbpedia.org/resource/Bruce_Willis	http://dbpedia.org/resource/Steve_Carell	http://dbpedia.org/resource/Wanda_Sykes	http://dbpedia.org/resource/Persis_Khambatta	http://dbpedia.org/resource/Milos_Milos	http://dbpedia.org/resource/Michael_Ironside	http://dbpedia.org/resource/Lee_Grant	http://dbpedia.org/resource/Dinah_Manoff	http://dbpedia.org/resource/Tori_Spelling	http://dbpedia.org/resource/Chris_Pine	http://dbpedia.org/resource/Brent_Spiner	http://dbpedia.org/resource/Hayden_Christensen	http://dbpedia.org/resource/Mark_Hamill	http://dbpedia.org/resource/Abigail_Breslin	http://dbpedia.org/resource/Robert_Picardo	http://dbpedia.org/resource/James_Earl_Jones	http://dbpedia.org/resource/Sandra_Oh	http://dbpedia.org/resource/Doug_Jones_(actor)	http://dbpedia.org/resource/Spencer_Breslin	http://dbpedia.org/resource/Stephanie_Zimbalist	http://dbpedia.org/resource/John_Houseman	http://dbpedia.org/resource/J.T._Colosa	http://dbpedia.org/resource/Rickey_Medlocke	http://dbpedia.org/resource/Dick_Van_Patten	http://dbpedia.org/resource/Duane_Whitaker	http://dbpedia.org/resource/Amy_Acker	http://dbpedia.org/resource/John_Prosky	http://dbpedia.org/resource/Brenda_Bakke	http://dbpedia.org/resource/Tom_Towles	http://dbpedia.org/resource/Chuck_Williams_(actor)	http://dbpedia.org/resource/Dan_Gauthier	http://dbpedia.org/resource/Eugene_Levy	http://dbpedia.org/resource/John_Candy	http://dbpedia.org/resource/Jock_Brandis	http://dbpedia.org/resource/Martin_Short	http://dbpedia.org/resource/Leslie_Nielsen	http://dbpedia.org/resource/Christopher_Britton_(actor)	http://dbpedia.org/resource/Robert_De_Niro	http://dbpedia.org/resource/Rene_Russo	http://dbpedia.org/resource/Eddie_Albert	http://dbpedia.org/resource/Anton_LaVey	http://dbpedia.org/resource/John_Travolta	http://dbpedia.org/resource/Doug_McClure	http://dbpedia.org/resource/Dennis_Cole	http://dbpedia.org/resource/Robert_Young_(actor)	http://dbpedia.org/resource/Dorothy_McGuire	http://dbpedia.org/resource/Eve_Plumb	http://dbpedia.org/resource/Susan_Dey	http://dbpedia.org/resource/Meredith_Baxter	http://dbpedia.org/resource/James_Darren	http://dbpedia.org/resource/Adrian_Zmed	http://dbpedia.org/resource/Heather_Locklear	http://dbpedia.org/resource/Pat_Hingle	http://dbpedia.org/resource/Paul_L._Smith	http://dbpedia.org/resource/Yvette_Mimieux	http://dbpedia.org/resource/Raymond_Burr	http://dbpedia.org/resource/Robert_Fuller	http://dbpedia.org/resource/Roy_Thinnes	http://dbpedia.org/resource/Jane_Merrow	http://dbpedia.org/resource/Buddy_Ebsen	http://dbpedia.org/resource/Russell_Johnson	http://dbpedia.org/resource/George_Lopez	http://dbpedia.org/resource/Sof%C3%ADa_Vergara	http://dbpedia.org/resource/Rob_Corddry	http://dbpedia.org/resource/Steve_Zahn	http://dbpedia.org/resource/Ricky_Gervais	http://dbpedia.org/resource/Jane_Lynch	http://dbpedia.org/resource/Craig_Robinson_(actor)	http://dbpedia.org/resource/Sarah_Jessica_Parker	http://dbpedia.org/resource/Jonathan_Morgan_Heit	http://dbpedia.org/resource/Brendan_Fraser	http://dbpedia.org/resource/Lindsay_Crouse	http://dbpedia.org/resource/Estelle_Parsons	http://dbpedia.org/resource/Lynn_Carlin	http://dbpedia.org/resource/Ossie_Davis	http://dbpedia.org/resource/Henry_Rollins	http://dbpedia.org/resource/Margo_Sappington	http://dbpedia.org/resource/Heidi_Klum	http://dbpedia.org/resource/Robin_Williams	http://dbpedia.org/resource/Matt_Lauer	http://dbpedia.org/resource/Jai_Rodriguez	http://dbpedia.org/resource/Reba_McEntire	http://dbpedia.org/resource/Danica_Patrick	http://dbpedia.org/resource/Ken_Jeong	http://dbpedia.org/resource/Whoopi_Goldberg	http://dbpedia.org/resource/Blake_Shelton	http://dbpedia.org/resource/Jay_Leno	http://dbpedia.org/resource/Trisha_Yearwood	http://dbpedia.org/resource/Vince_Edwards	http://dbpedia.org/resource/Will_Sasso	http://dbpedia.org/resource/Jonathan_Sadowski	http://dbpedia.org/resource/Tim_Bagley
+====================================================
+
+ID: 	30
+Content: 	
+What is the birth name of Angela Merkel?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	birth name
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/birthName
+	Angela Dorothea Kasner@en
+====================================================
+
+ID: 	31
+Content: 	
+Give me all current Methodist national leaders.
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+
+ID: 	33
+Content: 	
+Give me all Australian nonprofit organizations.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+
+ID: 	34
+Content: 	
+In which military conflicts did Lawrence of Arabia participate?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	military conflicts
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+
+====================================================
+
+ID: 	36
+Content: 	
+What is the melting point of copper?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	melting point
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	37
+Content: 	
+Give me all sister cities of Brno.
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/city
+	http://dbpedia.org/resource/University_of_Defence_(Czech_Republic)	http://dbpedia.org/resource/Brno_Reservoir	http://dbpedia.org/resource/University_of_Veterinary_and_Pharmaceutical_Sciences,_Brno	http://dbpedia.org/resource/HC_Kometa_Brno	http://dbpedia.org/resource/D1_motorway_(Czech_Republic)	http://dbpedia.org/resource/Masaryk_University	http://dbpedia.org/resource/R43_expressway_(Czech_Republic)	http://dbpedia.org/resource/Brno_University_of_Technology	http://dbpedia.org/resource/R52_expressway_(Czech_Republic)	http://dbpedia.org/resource/Mendel_University_Brno	http://dbpedia.org/resource/D2_motorway_(Czech_Republic)	http://dbpedia.org/resource/Brno%E2%80%93Tu%C5%99any_Airport
+====================================================
+
+ID: 	39
+Content: 	
+Give me all companies in Munich.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+
+ID: 	40
+Content: 	
+List all games by GMT.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	games
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+
+ID: 	43
+Content: 	
+Give me all breeds of the German Shepherd dog.
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/breed
+	http://dbpedia.org/resource/Strongheart	http://dbpedia.org/resource/Trakr	http://dbpedia.org/resource/Crumstone_Irma	http://dbpedia.org/resource/Rifleman_Khan	http://dbpedia.org/resource/Jet_of_Iada	http://dbpedia.org/resource/Lightning_(dog)	http://dbpedia.org/resource/Antis_(dog)	http://dbpedia.org/resource/Nemo_A534	http://dbpedia.org/resource/Mancs_(dog)	http://dbpedia.org/resource/Appollo_(dog)
+====================================================
+
+ID: 	44
+Content: 	
+Which cities does the Weser flow through?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	cities
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/city
+	http://dbpedia.org/resource/Fulda_(river)	http://dbpedia.org/resource/Hamelin	http://dbpedia.org/resource/Hann._M%C3%BCnden	http://dbpedia.org/resource/Bremerhaven	http://dbpedia.org/resource/Minden	http://dbpedia.org/resource/Kassel	http://dbpedia.org/resource/Bremen
+====================================================
+
+ID: 	45
+Content: 	
+Which countries are connected by the Rhine?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	countries
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/country
+	http://dbpedia.org/resource/Austria	http://dbpedia.org/resource/Switzerland	http://dbpedia.org/resource/Liechtenstein	http://dbpedia.org/resource/Netherlands	http://dbpedia.org/resource/Germany
+====================================================
+
+ID: 	46
+Content: 	
+Which professional surfers were born on the Philippines?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	professional surfers
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	47
+Content: 	
+What is the average temperature on Hawaii?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	average temperature
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/data
+	http://dbpedia.org/resource/Kaimuki-McKinley-Roosevelt_Complex_Area	http://dbpedia.org/resource/HHSAA_State_Football_Championships	http://dbpedia.org/resource/Farrington-Kaiser-Kalani_Complex_Area
+====================================================
+
+ID: 	48
+Content: 	
+In which UK city are the headquarters of the MI6?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	UK city
+Entity List: 	2
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/headquarters
+	http://dbpedia.org/resource/SIS_Building	http://dbpedia.org/resource/United_Kingdom	http://dbpedia.org/resource/London
+====================================================
+
+ID: 	49
+Content: 	
+Which other weapons did the designer of the Uzi develop?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	other weapons
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	51
+Content: 	
+Give me all Frisian islands that belong to the Netherlands.
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: No matched entity in the Node.
+
+ID: 	53
+Content: 	
+What is the ruling party in Lisbon?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	party
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/leaderParty
+	http://dbpedia.org/resource/Socialist_Party_(Portugal)
+====================================================
+
+ID: 	54
+Content: 	
+What are the nicknames of San Francisco?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	nicknames
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/nickname
+	The City by the Bay; Fog City; San Fran; Frisco; The City that Knows How ; Baghdad by the Bay ; The Paris of the West@en
+====================================================
+
+ID: 	55
+Content: 	
+Which Greek goddesses dwelt on Mount Olympus?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	Greek goddesses
+Entity List: 	3
+-------------------------
+ANSWER_TYPE = 0
+
+====================================================
+
+ID: 	57
+Content: 	
+Give me the Apollo 14 astronauts.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+
+ID: 	58
+Content: 	
+What is the time zone of Salt Lake City?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	time zone
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/timeZone
+	http://dbpedia.org/resource/Mountain_Time_Zone
+====================================================
+
+ID: 	59
+Content: 	
+Which U.S. states are in the same timezone as Utah?
+
+OnlyDBO: false	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	U.S. states
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/country
+	http://dbpedia.org/resource/United_States	http://dbpedia.org/resource/United_States_House_of_Representatives_election_in_Utah,_1895	http://dbpedia.org/resource/191st_Air_Refueling_Squadron	http://dbpedia.org/resource/151st_Air_Refueling_Wing	http://dbpedia.org/resource/United_States_presidential_election_in_Utah,_1976	http://dbpedia.org/resource/United_States_presidential_election_in_Utah,_1984	http://dbpedia.org/resource/United_States_presidential_election_in_Utah,_1988	http://dbpedia.org/resource/United_States_presidential_election_in_Utah,_1980	http://dbpedia.org/resource/Utah_Army_National_Guard	http://dbpedia.org/resource/Life_Sentence_Records	http://dbpedia.org/resource/Pioneer_Day_(Utah)	http://dbpedia.org/resource/Utah_Education_Association	http://dbpedia.org/resource/United_States_presidential_election_in_Utah,_1992	http://dbpedia.org/resource/United_States_presidential_election_in_Utah,_1996	http://dbpedia.org/resource/Utah_Air_National_Guard	http://dbpedia.org/resource/United_States_presidential_election_in_Utah,_2004	http://dbpedia.org/resource/United_States_presidential_election_in_Utah,_2008	http://dbpedia.org/resource/United_States_presidential_election_in_Utah,_2000	http://dbpedia.org/resource/Utah_gubernatorial_election,_2008	http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Utah,_2014
+====================================================
+
+ID: 	60
+Content: 	
+Give me a list of all lakes in Denmark.
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+
+====================================================
+
+ID: 	63
+Content: 	
+Give me all Argentine films.
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	2
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+
+ID: 	64
+Content: 	
+Give me all launch pads operated by NASA.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/operator
+	http://dbpedia.org/resource/MV_Retriever	http://dbpedia.org/resource/Kennedy_Space_Center_Launch_Complex_39	http://dbpedia.org/resource/White_Sands_Space_Harbor	http://dbpedia.org/resource/Broglio_Space_Centre	http://dbpedia.org/resource/Spaceport_Florida_Launch_Complex_36	http://dbpedia.org/resource/Wallops_Flight_Facility_Launch_Area_3	http://dbpedia.org/resource/Cape_Canaveral_Air_Force_Station_Launch_Complex_13	http://dbpedia.org/resource/Keweenaw_Rocket_Range	http://dbpedia.org/resource/Mid-Atlantic_Regional_Spaceport_Launch_Pad_0
+====================================================
+
+ID: 	65
+Content: 	
+Which instruments did John Lennon play?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	instruments
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/instrument
+	http://dbpedia.org/resource/Rickenbacker_325
+====================================================
+
+ID: 	66
+Content: 	
+Which ships were called after Benjamin Franklin?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	ships
+Entity List: 	2
+-------------------------
+ANSWER_TYPE = 0
+
+====================================================
+
+ID: 	72
+Content: 	
+In which U.S. state is Fort Knox located?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	U.S. state
+Entity List: 	3
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/location
+	http://dbpedia.org/resource/Grand_Rapids_Dam
+====================================================
+
+ID: 	75
+Content: 	
+Which daughters of British earls died in the same place they were born in?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	daughters
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	76
+Content: 	
+List the children of Margaret Thatcher.
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/child
+	http://dbpedia.org/resource/Mark_Thatcher	http://dbpedia.org/resource/Carol_Thatcher
+====================================================
+
+ID: 	81
+Content: 	
+Which books by Kerouac were published by Viking Press?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	books
+Entity List: 	2
+-------------------------
+ANSWER = null / ANSWER has exception: 81: map style; No matched Entity.
+ID: 	82
+Content: 	
+Give me a list of all American inventions.
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+entityList size equals 0.
+
+ID: 	83
+Content: 	
+How high is the Mount Everest?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: ConstraintList size equals 0.
+
+ID: 	88
+Content: 	
+Which films starring Clint Eastwood did he direct himself?
+
+OnlyDBO: false	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	films
+Entity List: 	2
+-------------------------
+ANSWER = null / ANSWER has exception: No matched entity in the Node.
+
+ID: 	89
+Content: 	
+In which city was the former Dutch queen Juliana buried?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	city
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	91
+Content: 	
+Which U.S. state has the abbreviation MN?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	U.S. state
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: No matched entity in the Node.
+
+ID: 	92
+Content: 	
+Show me all songs from Bruce Springsteen released between 1980 and 1990.
+
+OnlyDBO: true	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	songs
+Entity List: 	1
+-------------------------
+ANSWER = null / ANSWER has exception: 92 constraintList size equals 2 && pipeline style &&No matched entity
+ID: 	93
+Content: 	
+Which movies did Kurosawa direct after Rashomon?
+
+OnlyDBO: false	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	movies
+Entity List: 	2
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/ontology/director
+	http://dbpedia.org/resource/The_Men_Who_Tread_on_the_Tiger's_Tail	http://dbpedia.org/resource/High_and_Low_(1963_film)	http://dbpedia.org/resource/Ikiru	http://dbpedia.org/resource/Seven_Samurai	http://dbpedia.org/resource/Those_Who_Make_Tomorrow	http://dbpedia.org/resource/I_Live_in_Fear	http://dbpedia.org/resource/Sanshiro_Sugata_Part_II	http://dbpedia.org/resource/Throne_of_Blood	http://dbpedia.org/resource/Rashomon	http://dbpedia.org/resource/No_Regrets_for_Our_Youth	http://dbpedia.org/resource/Stray_Dog_(film)	http://dbpedia.org/resource/The_Lower_Depths_(1957_film)	http://dbpedia.org/resource/Drunken_Angel	http://dbpedia.org/resource/Dodes'ka-den	http://dbpedia.org/resource/Ran_(film)	http://dbpedia.org/resource/Yojimbo_(film)	http://dbpedia.org/resource/Dersu_Uzala_(1975_film)	http://dbpedia.org/resource/Kagemusha	http://dbpedia.org/resource/Horse_(1941_film)	http://dbpedia.org/resource/Rhapsody_in_August	http://dbpedia.org/resource/The_Hidden_Fortress	http://dbpedia.org/resource/Madadayo	http://dbpedia.org/resource/The_Most_Beautiful	http://dbpedia.org/resource/One_Wonderful_Sunday	http://dbpedia.org/resource/Dreams_(1990_film)	http://dbpedia.org/resource/The_Quiet_Duel	http://dbpedia.org/resource/Sanshiro_Sugata	http://dbpedia.org/resource/The_Idiot_(1951_film)	http://dbpedia.org/resource/Red_Beard	http://dbpedia.org/resource/Scandal_(1950_film)	http://dbpedia.org/resource/Sanjuro	http://dbpedia.org/resource/The_Bad_Sleep_Well
+====================================================
+
+ID: 	94
+Content: 	
+What is the founding year of the brewery that produces Pilsner Urquell?
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	founding year
+Entity List: 	2
+-------------------------
+ANSWER = null / ANSWER has exception: pipe style, step 1 error, predicateList size equals: 0
+ID: 	96
+Content: 	
+Give me all B-sides of the Ramones. 
+
+OnlyDBO: false	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	
+Entity List: 	0
+-------------------------
+ANSWER = null / ANSWER has exception: entityList size equals 0.
+
+ID: 	98
+Content: 	
+Which country does the creator of Miffy come from?
+
+OnlyDBO: true	Aggregation: false
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	country
+Entity List: 	1
+-------------------------
+Pair Predicate: http://dbpedia.org/ontology/creator	http://dbpedia.org/ontology/nationality
+	http://dbpedia.org/resource/Netherlands
+====================================================
+
+ID: 	99
+Content: 	
+For which label did Elvis record his first album?
+
+OnlyDBO: true	Aggregation: true
+Category: 	RESOURCE
+Rule Judgement:	{WHO=false, COMPARISON=false, WHERE=false}
+Focus Content: 	label
+Entity List: 	1
+-------------------------
+ANSWER_TYPE = 0
+Predicate: http://dbpedia.org/property/name
+	Presley, Elvis Aaron@en	Elvis Presley@en	http://dbpedia.org/resource/List_of_Tau_Kappa_Epsilon_brothers
+====================================================
+
+XML Question ID: 53
+XML Question ID: 19
+XML Question ID: 76
+XML Question ID: 90
+XML Question ID: 99
+XML Question ID: 28
+XML Question ID: 45
+XML Question ID: 44
+XML Question ID: 80
+XML Question ID: 62
+XML Question ID: 78
+XML Question ID: 43
+XML Question ID: 98
+XML Question ID: 93
+XML Question ID: 2
+XML Question ID: 38
+XML Question ID: 14
+XML Question ID: 68
+XML Question ID: 23
+XML Question ID: 87
+XML Question ID: 6
+XML Question ID: 47
+XML Question ID: 30
+XML Question ID: 58
+XML Question ID: 64
+XML Question ID: 95
+XML Question ID: 29
+XML Question ID: 22
+XML Question ID: 8
+XML Question ID: 65
+XML Question ID: 71
+XML Question ID: 59
+XML Question ID: 86
+XML Question ID: 37
+XML Question ID: 54
+XML Question ID: 69
+XML Question ID: 48
+XML Question ID: 4
+XML Question ID: 70
+XML Question ID: 41
+XML Question ID: 17
+XML Question ID: 56
+XML Question ID: 5
+XML Question ID: 77
+XML Question ID: 74
+XML Question ID: 24
+XML Question ID: 100
+XML Question ID: 35
+XML Question ID: 42
+XML Question ID: 3
+XML Question ID: 67
+XML Question ID: 84
+XML Question ID: 21
+XML Question ID: 72
+XML Question ID: 79
+XML Question ID: 10
+XML Question ID: 7
