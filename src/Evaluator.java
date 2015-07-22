@@ -14,6 +14,7 @@ public class Evaluator {
 		for (Question question : questions) {
 			String query = question.query;
 			question.answers.clear();
+			System.err.println("QID = "+question.id);
 			if(query == null || query.length() ==0 || query.contains("OUT OF SCOPE")) {
 				System.err.println("No query!\tID = "+question.id);
 				continue;
@@ -60,13 +61,13 @@ public class Evaluator {
 			System.err.println("QID = "+goldQ.id);
 			Question genQ = genParse.getQuestionWithId(goldQ.id);
 			
+			if(goldQ.query.contains("yago")) {
+				precision[goldQ.id] = recall[goldQ.id] = 0.0;
+				status[qid] = -4; // yago
+				continue;
+			}
+			
 			if(genQ == null) {
-				if(goldQ.query.contains("yago")) {
-					precision[goldQ.id] = recall[goldQ.id] = 0.0;
-					status[qid] = -4; // yago
-					continue;
-				}
-				else
 				if(goldQ.answers.isEmpty() || goldQ.answers.getFirst().equals("OUT OF SCOPE")) {
 					precision[goldQ.id] = recall[goldQ.id] = 1.0;
 					status[qid] = -1; // gold:0 we:0
