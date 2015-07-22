@@ -122,6 +122,7 @@ public class Evaluator {
 				fscore[i] = 2*precision[i]*recall[i]/(precision[i]+recall[i]);
 			}
 			f1 += fscore[i];
+			System.out.println(i+"\t"+goldParse.getQuestionWithId(i).question.substring(1,goldParse.getQuestionWithId(i).question.length()-1));
 			System.out.println(i+"\t"+precision[i]+"\t"+recall[i]+"\t"+status[i]);
 		}
 		p /= (goldQuestionNumber-fakeCount);
