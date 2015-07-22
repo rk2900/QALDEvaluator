@@ -3,6 +3,7 @@ import java.util.HashSet;
 
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.rdf.model.RDFNode;
 
 import knowledgebase.ClientManagement;
 
@@ -25,7 +26,13 @@ public class Evaluator {
 				String varName = results.getResultVars().get(0);
 				while(results.hasNext()) {
 					QuerySolution qs = results.next();
-					String answer = qs.get(varName).toString();
+					RDFNode node = qs.get(varName);
+					String answer;
+					if(node.isLiteral())
+						answer = node.asLiteral().getString();
+					else {
+						answer = node.asResource().getURI();
+					}
 					question.answers.add(answer);
 //					System.out.println("Question ID = "+question.id+"\t"+answer);
 				}
@@ -52,21 +59,28 @@ public class Evaluator {
 			int qid = goldQ.id;
 			System.err.println("QID = "+goldQ.id);
 			Question genQ = genParse.getQuestionWithId(goldQ.id);
+			
 			if(genQ == null) {
+				if(goldQ.query.contains("yago")) {
+					precision[goldQ.id] = recall[goldQ.id] = 0.0;
+					status[qid] = -4; // yago
+					continue;
+				}
+				else
 				if(goldQ.answers.isEmpty() || goldQ.answers.getFirst().equals("OUT OF SCOPE")) {
 					precision[goldQ.id] = recall[goldQ.id] = 1.0;
-					status[qid] = -1;
+					status[qid] = -1; // gold:0 we:0
 				} else {
 					precision[goldQ.id] = recall[goldQ.id] = 0.0;
-					status[qid] = -2;
+					status[qid] = -2; // gold:1 we:0
 				}
 			}
 			else {
 				if(goldQ.answers.isEmpty() || goldQ.answers.getFirst().equals("OUT OF SCOPE")) {
-					precision[qid] = recall[qid] = 0.0;
+					precision[qid] = recall[qid] = 0.0; // gold:0 we:1
 					status[qid] = -3;
 				}
-				else{
+				else{ // gold:1 we:1
 					HashSet<String> goldAnsSet = new HashSet<>();
 					HashSet<String> intersect = new HashSet<>();
 					for (String ans : goldQ.answers) {
@@ -92,7 +106,13 @@ public class Evaluator {
 		double r = 0.0;
 		double f1 = 0.0;
 		
+		int fakeCount = 0;
+		
 		for(int i=1; i<goldQuestionNumber+1; ++i) {
+			if(status[i] == 0) { // not a real question in the test file
+				fakeCount++;
+				continue;
+			}
 			p += precision[i];
 			r += recall[i];
 			if(precision[i]<0.0001 && recall[i]<0.0001) {
@@ -103,9 +123,11 @@ public class Evaluator {
 			f1 += fscore[i];
 			System.out.println(i+"\t"+precision[i]+"\t"+recall[i]+"\t"+status[i]);
 		}
-		p /= goldQuestionNumber;
-		r /= goldQuestionNumber;
-		f1 /= goldQuestionNumber;
+		p /= (goldQuestionNumber-fakeCount);
+		r /= (goldQuestionNumber-fakeCount);
+		f1 /= (goldQuestionNumber-fakeCount);
+		
+		System.err.println("FAKE COUNT = "+fakeCount);
 		System.out.println("GLOBAL_2: precision="+p+", "+"recall="+r+", "+"f1="+f1);
 		
 		/***************************/
@@ -128,7 +150,7 @@ public class Evaluator {
 			f1 += fscore[i];
 		}
 		System.out.println("COUNT = "+count);
-		System.out.println("GLOBAL: precision="+p/goldQuestionNumber+", "+"recall="+r/goldQuestionNumber+", "+"f1="+f1/goldQuestionNumber);
+		System.out.println("GLOBAL: precision="+p/(goldQuestionNumber-fakeCount)+", "+"recall="+r/(goldQuestionNumber-fakeCount)+", "+"f1="+f1/(goldQuestionNumber-fakeCount));
 		System.out.println("PARTIAL: precision="+p/count+", "+"recall="+r/count+", "+"f1="+f1/count);
 		
 	}
