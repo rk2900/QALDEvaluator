@@ -82,6 +82,9 @@ public class Evaluator {
 					status[qid] = -3;
 				}
 				else{ // gold:1 we:1
+					if(goldQ.id == 12) {
+						System.out.println(12345);
+					}
 					HashSet<String> goldAnsSet = new HashSet<>();
 					HashSet<String> intersect = new HashSet<>();
 					for (String ans : goldQ.answers) {
@@ -122,8 +125,8 @@ public class Evaluator {
 				fscore[i] = 2*precision[i]*recall[i]/(precision[i]+recall[i]);
 			}
 			f1 += fscore[i];
-			System.out.println(i+"\t"+goldParse.getQuestionWithId(i).question.substring(1,goldParse.getQuestionWithId(i).question.length()-1));
-			System.out.println(i+"\t"+precision[i]+"\t"+recall[i]+"\t"+status[i]);
+//			System.out.println(i+"\t"+goldParse.getQuestionWithId(i).question.substring(1,goldParse.getQuestionWithId(i).question.length()-1));
+			System.out.println(i+"\t"+precision[i]+"\t"+recall[i]+"\t"+fscore[i]+"\t"+status[i]+"\t"+Tool.removeNewLine(goldParse.getQuestionWithId(i).question));
 		}
 		p /= (goldQuestionNumber-fakeCount);
 		r /= (goldQuestionNumber-fakeCount);

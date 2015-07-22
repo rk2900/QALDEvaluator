@@ -6,7 +6,15 @@ public class Main {
 		goldParse.setFilePath(Const.qald_result_gold);
 		goldParse.parse(true);
 		
+//		for (Question question : goldParse.getQuestions()) {
+//			System.out.print("QID: "+question.id+"\t");
+//			for (String ans : question.answers) {
+//				System.out.print(ans+"\t");
+//			}
+//			System.out.println();
+//		}
 		
+		/**/
 		// load generated XML file
 		XMLParser genParse = new XMLParser();
 		genParse.setFilePath(Const.generated_result);
@@ -17,5 +25,6 @@ public class Main {
 		if(Const.needsQueryForAnswer)
 			evaluator.setGoldAnswer(goldParse);
 		evaluator.evaluate(goldParse, genParse);
+		/**/
 	}
 }

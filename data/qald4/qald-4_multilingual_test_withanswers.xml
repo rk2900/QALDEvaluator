@@ -93,7 +93,7 @@ WHERE {
 <keywords lang="ro"><![CDATA[limbaje de programare, există]]></keywords>
 <query><![CDATA[PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-SELECT COUNT(DISTINCT ?uri)
+SELECT (COUNT(DISTINCT ?uri) AS ?x)
 WHERE {
         ?uri rdf:type dbo:ProgrammingLanguage .
 }]]></query>
@@ -196,7 +196,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 SELECT DISTINCT ?uri
 WHERE {
         ?uri rdf:type dbo:Animal .
-        ?uri dbo:conservationStatus EX .
+        ?uri dbo:conservationStatus "Not Evaluated" .
 }]]></query>
 <answers>
 <answer>
@@ -3996,7 +3996,7 @@ WHERE {
 <keywords lang="ro"><![CDATA[câte, filme James Bond]]></keywords>
 <query><![CDATA[PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX yago: <http://dbpedia.org/class/yago/> 
-SELECT COUNT(DISTINCT ?uri) 
+SELECT (COUNT(DISTINCT ?uri) AS ?x)
 WHERE {
         ?uri rdf:type yago:JamesBondFilms . 
 }]]></query>
@@ -4398,7 +4398,7 @@ OFFSET 0 LIMIT 1]]></query>
 <keywords lang="ro"><![CDATA[limbi, Columbia]]></keywords>
 <query><![CDATA[PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX res: <http://dbpedia.org/resource/>
-SELECT COUNT(DISTINCT ?uri) 
+SELECT (COUNT(DISTINCT ?uri) AS ?x)
 WHERE {
         ?uri rdf:type dbo:Language . 
         res:Colombia dbo:language ?uri .

@@ -146,7 +146,12 @@ public class XMLParser {
 						NodeList answerList = answersElement.getElementsByTagName("answer");
 						for(int i=0; i<answerList.getLength(); i++) {
 							Node answer = answerList.item(i);
-							answers.add(new String(answer.getTextContent()));
+							String ansString = answer.getTextContent();
+							if(ansString.startsWith("\n"))
+								ansString = ansString.substring(1);
+							if(ansString.endsWith("\n"))
+								ansString = ansString.substring(0, ansString.length()-1);
+							answers.add(new String(ansString));
 						}
 					}
 				} else {}
