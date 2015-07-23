@@ -1,6 +1,6 @@
 
 public class Const {
-	
+	public static final boolean printSPARQL = true;
 	
 	//QALD3
 	public static final boolean needsQueryForAnswer = true;
