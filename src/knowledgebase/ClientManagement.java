@@ -3,7 +3,6 @@ package knowledgebase;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
-import java.util.List;
 
 import com.franz.agraph.jena.AGGraph;
 import com.franz.agraph.jena.AGGraphMaker;
@@ -348,18 +347,18 @@ public class ClientManagement {
 	
 	public static void main(String[] args) throws Exception {
 		/**/
-		String sparql = "PREFIX dbp: <http://dbpedia.org/property/>"
+		String sparql = "PREFIX dbo: <http://dbpedia.org/ontology/>"
 				+ "PREFIX res: <http://dbpedia.org/resource/>"
-				+ "SELECT DISTINCT ?label "
+				+ "SELECT DISTINCT ?num "
 				+ "WHERE {"
-				+ " res:Beijing rdfs:label ?label ."
+				+ "	res:Mount_Everest dbo:elevation ?num."
 				+ "}";
 		ResultSet rs = ClientManagement.query(sparql, true);
 		while(rs.hasNext()) {
 			QuerySolution qs = rs.next();
-			System.out.println(qs.get("label").asLiteral().getString());
+			System.out.println(qs.get("num").asLiteral().getString());
 			System.out.println();
-			System.out.println(qs.getLiteral("label"));
+			System.out.println(qs.getLiteral("num").getDatatypeURI());
 		}
 		
 	}

@@ -3,6 +3,7 @@ import java.util.HashSet;
 
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 
 import knowledgebase.ClientManagement;
@@ -10,41 +11,52 @@ import knowledgebase.ClientManagement;
 public class Evaluator {
 	
 	public void setGoldAnswer(XMLParser goldParse) {
+		System.err.println("Gold answer generating ...");
+		System.err.println("QID\tAns_Num\tReason");
 		ArrayList<Question> questions = goldParse.getQuestions();
 		for (Question question : questions) {
 			String query = question.query;
+			if(query.contains("yago")) ;
 			question.answers.clear();
-			System.err.println("QID = "+question.id);
 			if(query == null || query.length() ==0 || query.contains("OUT OF SCOPE")) {
-				System.err.println("No query!\tID = "+question.id);
+				System.err.println(question.id+"\t"+0+"\tNo query");
 				continue;
 			}
 			if(query.contains("ASK")) {
-				Boolean result = ClientManagement.ask(query, true);
+				Boolean result = ClientManagement.ask(query, Const.printSPARQL);
 				question.answers.add(result.toString());
+				System.err.println(question.id+"\t"+1+"\tBoolean");
 			} else {
-				ResultSet results = ClientManagement.query(query, true);
+				ResultSet results = ClientManagement.query(query, Const.printSPARQL);
 				String varName = results.getResultVars().get(0);
 				while(results.hasNext()) {
 					QuerySolution qs = results.next();
 					RDFNode node = qs.get(varName);
 					String answer;
-					if(node.isLiteral())
-						answer = node.asLiteral().getString();
+					if(node.isLiteral()) {
+						Literal literal = node.asLiteral();
+						if(literal.getDatatypeURI() != null && literal.getDatatypeURI().equals("http://www.w3.org/2001/XMLSchema#double")) {
+							answer = ""+literal.getDouble();
+						} else {
+							answer = node.asLiteral().getString();
+						}
+					}
 					else {
 						answer = node.asResource().getURI();
 					}
 					question.answers.add(answer);
-//					System.out.println("Question ID = "+question.id+"\t"+answer);
+				}
+				if(question.answers.size() == 0) {
+					System.err.println(question.id+"\t"+question.answers.size()+"\t"+"Get no answer in KB");
 				}
 			}
 		}
 	}
 	
 	
-	public void evaluate(XMLParser goldParse, XMLParser genParse) {
+	public void evaluate(ArrayList<Question> goldParse, ArrayList<Question> genParse) {
 		int goldQuestionNumber = 0;
-		for (Question q : goldParse.getQuestions()) {
+		for (Question q : goldParse) {
 			goldQuestionNumber = goldQuestionNumber<q.id?q.id:goldQuestionNumber;
 		}
 		System.err.println("TOTAL NUMBER = "+goldQuestionNumber);
@@ -56,10 +68,10 @@ public class Evaluator {
 			precision[i] = recall[i] = fscore[i] = 1.0;
 		}
 		
-		for (Question goldQ : goldParse.getQuestions()) {
+		for (Question goldQ : goldParse) {
 			int qid = goldQ.id;
 			System.err.println("QID = "+goldQ.id);
-			Question genQ = genParse.getQuestionWithId(goldQ.id);
+			Question genQ = getQuestionWithId(genParse, goldQ.id);
 			
 			if(goldQ.query.contains("yago")) {
 				precision[goldQ.id] = recall[goldQ.id] = 0.0;
@@ -74,6 +86,10 @@ public class Evaluator {
 				} else {
 					precision[goldQ.id] = recall[goldQ.id] = 0.0;
 					status[qid] = -2; // gold:1 we:0
+					for (String ans : goldQ.answers) {
+						System.err.print(ans+"\t");
+					}
+					System.err.println();
 				}
 			}
 			else {
@@ -82,28 +98,25 @@ public class Evaluator {
 					status[qid] = -3;
 				}
 				else{ // gold:1 we:1
-					if(goldQ.id == 12) {
-						System.out.println(12345);
-					}
 					HashSet<String> goldAnsSet = new HashSet<>();
 					HashSet<String> intersect = new HashSet<>();
 					for (String ans : goldQ.answers) {
-						goldAnsSet.add(ans);
+						goldAnsSet.add(ans.toLowerCase());
 						System.err.print(ans+"\t");
 					}
 					System.err.println("\n------------------");
 					for (String genAns : genQ.answers) {
 						System.err.print(genAns+"\t");
-						if(goldAnsSet.contains(genAns)) {
+						if(goldAnsSet.contains(genAns.toLowerCase())) {
 							intersect.add(genAns);
 						}
 					}
-					System.err.println("\n===================================");
 					precision[qid] = intersect.size()*1.0/genQ.answers.size();
 					recall[qid] = intersect.size()*1.0/goldQ.answers.size();
 					status[qid] = 1;
 				}
 			}
+			System.err.println("\n===================================");
 		}
 		
 		double p = 0.0;
@@ -126,7 +139,7 @@ public class Evaluator {
 			}
 			f1 += fscore[i];
 //			System.out.println(i+"\t"+goldParse.getQuestionWithId(i).question.substring(1,goldParse.getQuestionWithId(i).question.length()-1));
-			System.out.println(i+"\t"+precision[i]+"\t"+recall[i]+"\t"+fscore[i]+"\t"+status[i]+"\t"+Tool.removeNewLine(goldParse.getQuestionWithId(i).question));
+			System.out.println(i+"\t"+precision[i]+"\t"+recall[i]+"\t"+fscore[i]+"\t"+status[i]+"\t"+Tool.removeNewLine(getQuestionWithId(goldParse, i).question));
 		}
 		p /= (goldQuestionNumber-fakeCount);
 		r /= (goldQuestionNumber-fakeCount);
@@ -158,5 +171,13 @@ public class Evaluator {
 		System.out.println("GLOBAL: precision="+p/(goldQuestionNumber-fakeCount)+", "+"recall="+r/(goldQuestionNumber-fakeCount)+", "+"f1="+f1/(goldQuestionNumber-fakeCount));
 		System.out.println("PARTIAL: precision="+p/count+", "+"recall="+r/count+", "+"f1="+f1/count);
 		
+	}
+	
+	public Question getQuestionWithId(ArrayList<Question> qList, int id) {
+		for (Question question : qList) {
+			if(question.id == id)
+				return question;
+		}
+		return null;
 	}
 }

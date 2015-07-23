@@ -118,7 +118,7 @@ public class XMLParser {
 				for(int i=0; i<strNodeList.getLength(); i++) {
 					Node strNode = strNodeList.item(i);
 					if(strNode.getAttributes().item(0).getNodeValue().equals("en")) {
-						question = new String(strNode.getTextContent());
+						question = new String(Tool.removeNewLine(strNode.getTextContent()));
 						break;
 					}
 				}

@@ -33,5 +33,6 @@
 	<classpathentry kind="lib" path="lib/sesame/openrdf-sesame-2.7.11-onejar-src.jar"/>
 	<classpathentry kind="lib" path="lib/sesame/openrdf-sesame-2.7.11-onejar.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/BasicOps"/>
+	<classpathentry kind="lib" path="lib/jsoup/jsoup-1.8.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
