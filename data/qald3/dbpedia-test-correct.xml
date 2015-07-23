@@ -185,12 +185,12 @@ Université libre, Amsterdam, étudiants
 Vrije Universiteit, Amsterdam, studenten
 ]]></keywords>
 <query><![CDATA[
-PREFIX dbo: <http://dbpedia.org/ontology/>
-PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX res: <http://dbpedia.org/resource/> 
 SELECT DISTINCT ?num 
-WHERE {
-	res:Vrije_Universiteit dbo:numberOfStudents ?num .
-}
+WHERE { 
+        res:VU_University_Amsterdam dbo:numberOfStudents ?num . 
+} 
 ]]></query>
 </question>
 
@@ -475,12 +475,12 @@ hommes, femmes, sapeurs-pompiers professionnels de New York
 mannen, vrouwen, brandweer, New York
 ]]></keywords>
 <query><![CDATA[
-PREFIX dbp: <http://dbpedia.org/property/>
-PREFIX res: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/> 
+PREFIX res: <http://dbpedia.org/resource/> 
 SELECT DISTINCT ?num 
-WHERE {
-	res:New_York_City_Fire_Department dbp:strength ?num .
-}
+WHERE { 
+        res:New_York_City_Fire_Department dbp:employees ?num . 
+} 
 ]]></query>
 </question>
 
@@ -3789,12 +3789,12 @@ boeken, William Goldman, meer dan 300 pagina's
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX res: <http://dbpedia.org/resource/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-SELECT DISTINCT ?uri 
+SELECT DISTINCT ?uri ?x
 WHERE {
         ?uri rdf:type dbo:Book .
 	?uri dbo:author res:William_Goldman .
         ?uri dbo:numberOfPages ?x .
-        FILTER (?x > 300)
+  FILTER ( ?x > "300"^^xsd:postiveInteger)
 }
 ]]></query>
 </question>
@@ -4423,10 +4423,9 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 SELECT DISTINCT ?uri
 WHERE {
 	?uri rdf:type dbo:Film .
-        ?uri dbo:director res:Akira_Kurosawa .
+    ?uri dbo:director res:Akira_Kurosawa .
 	{ ?uri dbo:releaseDate ?x . } UNION { ?uri dbp:released ?x . }
-        <http://dbpedia.org/resource/Rashomon_(film)> dbo:releaseDate ?y .
-        FILTEr (?y > ?x)
+  	FILTER (?x > "1950-08-25"^^xsd:date)
 }
 ]]></query>
 </question>
