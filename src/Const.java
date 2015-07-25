@@ -7,7 +7,7 @@ public class Const {
 	public static final String qald_result_gold = "./data/qald3/dbpedia-test-correct.xml";
 //	public static final String generated_result = "./data/qald3/qald3-test-entity2.xml";
 //	public static final String generated_result = "./data/qald3/qald3-test-0.25.xml";
-	public static final String generated_result = "./data/qald3/qald3-tmp-test-0.25.xml";
+	public static final String generated_result = "./data/qald3/qald3-test-0.15.xml";
 	
 	//QALD4
 //	public static final boolean needsQueryForAnswer = false;
