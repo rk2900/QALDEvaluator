@@ -818,18 +818,25 @@ voiture, produites, Allemagne
 auto, gemaakt, Duitsland
 ]]></keywords>
 <query><![CDATA[
-PREFIX dbo: <http://dbpedia.org/ontology/>
-PREFIX dbp: <http://dbpedia.org/property/>
-PREFIX res: <http://dbpedia.org/resource/>
-PREFIX yago: <http://dbpedia.org/class/yago/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-SELECT DISTINCT ?uri
-WHERE {
-        ?uri rdf:type dbo:Automobile .   
-        { ?uri dbp:production res:Germany . } UNION { ?uri dbp:assembly res:Germany . }
-        UNION { ?uri dbp:manufacturer ?x .  
-        { ?x dbo:locationCountry res:Germany . } UNION { ?x rdf:type yago:AutomotiveCompaniesOfGermany . } }
-}
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX dbp: <http://dbpedia.org/property/> 
+PREFIX res: <http://dbpedia.org/resource/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+SELECT DISTINCT ?uri 
+WHERE { 
+        ?uri rdf:type dbo:Automobile . 
+      { ?uri dbo:assembly res:Germany . } 
+      UNION 
+      { ?uri dbp:assembly res:Germany . } 
+      UNION 
+      { { ?uri dbo:manufacturer ?x . } 
+        UNION 
+        { ?uri dbp:manufacturer ?x . } 
+        { ?x dbo:locationCountry res:Germany . } 
+        UNION 
+        { ?x dbo:location res:Germany . } 
+      } 
+} 
 ]]></query>
 </question>
 

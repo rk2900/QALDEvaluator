@@ -36,7 +36,9 @@ public class Evaluator {
 					if(node.isLiteral()) {
 						Literal literal = node.asLiteral();
 						if(literal.getDatatypeURI() != null && literal.getDatatypeURI().equals("http://www.w3.org/2001/XMLSchema#double")) {
-							answer = ""+literal.getDouble();
+//							answer = ""+literal.toString();//.getDouble();
+							answer = node.asLiteral().getString();
+//							System.err.println("@@@@@@@@@"+answer);
 						} else {
 							answer = node.asLiteral().getString();
 						}
@@ -53,7 +55,12 @@ public class Evaluator {
 		}
 	}
 	
-	
+	public void showAnswers(ArrayList<Question> goldParse){
+//		System.err.println(goldParse);
+		for (Question question : goldParse) {
+			System.out.println(question.id + "\t" + question.question+"\t"+ question.answers);
+		}
+	}
 	public void evaluate(ArrayList<Question> goldParse, ArrayList<Question> genParse) {
 		int goldQuestionNumber = 0;
 		for (Question q : goldParse) {
